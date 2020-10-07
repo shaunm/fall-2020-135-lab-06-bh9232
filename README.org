@@ -10,7 +10,7 @@
 Assumptions (according to main lab):
 - 0 <= rshift <= 25 (task B)
 - keyword are (a-z) (task C)
-- I may add more checks besides these but I will focus on these more
+- I may add more checks besides these but I will focus with these assumptions in mind
 
 * General instructions:
 - Fill in your name and GitHub username on top.

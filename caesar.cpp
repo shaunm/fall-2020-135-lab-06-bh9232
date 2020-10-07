@@ -12,20 +12,17 @@ caesar.cpp contains code for functions from caesar.h
 
 char shiftChar(char c, int rshift){ //helper method
 
-  int displacement;//needed if c is close to 'A' or 'z'
   if(((int) c >= 65 && c <= 90) || ((int) c >= 97 && c <= 122)){//if alphabet ASCII
+
     //if UpperCase letters
-    if(((int) c >= 65 && c <= 90) && (int) c + rshift > 90){
-      displacement = 90-c;      
-      c = 64 - displacement;
-      
+    if((int) c >= 65 && (int)c <= 90){
+      c = ((int)c + rshift - 65) % 26 + 65; 
+    } 
+
     //if LowerCase letters
-    }else if (((int) c >= 97 && c <= 122) && (int) c + rshift > 122){
-      displacement = 122-c;    
-      c = 96 - displacement;
+    else if ((int) c >= 97 && (int)c <= 122){
+      c = ((int)c + rshift - 97) % 26 + 97;  
     }
-    
-    c +=  rshift;// shifts the character
   }
   
   return c;
