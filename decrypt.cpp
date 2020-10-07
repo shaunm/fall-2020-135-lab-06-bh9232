@@ -7,6 +7,7 @@ Assignment: Lab 05
 decrypt.cpp contains code for functions from decrypt.h
 */
 #include <iostream>
+#include <cctype>
 #include <string>
 #include "decrypt.h"
 #include "caesar.h"
@@ -26,7 +27,7 @@ std::string decryptVigenere(std::string cipher, std::string keyword){
 	int index = 0;
 	for(int i = 0; i < size; i++){
 		shift = (int)(keyword[index%keyword.size()]-97);
-	    if((int)cipher[i] < 65 || ((int)cipher[i] > 90 && (int)cipher[i] < 97) || (int)cipher[i] > 122){
+	    if(!isalpha(cipher[i])){
 	      index--;
 	    }
 	    text += shiftChar(cipher[i], 26 - shift);

@@ -7,20 +7,21 @@ Assignment: Lab 05
 caesar.cpp contains code for functions from caesar.h
 */
 #include <iostream>
+#include <cctype>
 #include <string>
 #include "caesar.h"
 
 char shiftChar(char c, int shift){ //helper method
 
-  if(((int) c >= 65 && c <= 90) || ((int) c >= 97 && c <= 122)){//if alphabet ASCII
+  if(isalpha(c)){//if alphabet ASCII
 
-    //if UpperCase letters
-    if((int) c >= 65 && (int)c <= 90){
+    //if upper case letters
+    if(isupper(c)){
       c = ((int)c + shift - 65) % 26 + 65; 
     } 
 
-    //if LowerCase letters
-    else if ((int) c >= 97 && (int)c <= 122){
+    //if lower case letters
+    else if (islower(c)){
       c = ((int)c + shift - 97) % 26 + 97;  
     }
   }
