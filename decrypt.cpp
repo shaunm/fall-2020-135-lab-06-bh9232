@@ -15,16 +15,22 @@ std::string decryptCaesar(std::string cipher, int shift){
 	std::string text;
 	int size = cipher.size();
 	for(int i = 0; i < size; i++){
-		text += shiftChar(cipher[i], -1 * shift);
+		text += shiftChar(cipher[i], 26 - shift);
 	}
 	return text;
 }
 std::string decryptVigenere(std::string cipher, std::string keyword){
 	std::string text;
 	int size = cipher.size();
+	int shift;
 	int index = 0;
 	for(int i = 0; i < size; i++){
-		text += shiftChar(cipher[i], -1 * (int)keyword[index%keyword.size()]-97);
+		shift = (int)(keyword[index%keyword.size()]-97);
+	    if((int)cipher[i] < 65 || ((int)cipher[i] > 90 && (int)cipher[i] < 97) || (int)cipher[i] > 122){
+	      index--;
+	    }
+	    text += shiftChar(cipher[i], 26 - shift);
+	    index++;
 	}
 	return text;
 }

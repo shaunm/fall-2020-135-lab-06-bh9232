@@ -1,11 +1,13 @@
 #include <iostream>
 #include <string>
 #include "funcs.h"
-#include "caesar.h"
+
 
 int main()
 {
   test_ascii("Hello");
+  std::cout << "\n";
+  test_ascii("Rawr");
 
   return 0;
 }

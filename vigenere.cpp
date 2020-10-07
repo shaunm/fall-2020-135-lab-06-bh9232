@@ -18,11 +18,11 @@ std::string encryptVigenere(std::string text, std::string keyword){//allowed to 
   int shift;
   int index = 0;
   for(int i = 0; i < size; i++){
-    shift = 65 - (int)keyword[index];
+    shift = (int) (keyword[index%keyword.size()]-97);
     if((int)text[i] < 65 || ((int)text[i] > 90 && (int)text[i] < 97) || (int)text[i] > 122){
       index--;
     }
-    cipher += shiftChar(text[i],(int)keyword[index%keyword.size()]-97);
+    cipher += shiftChar(text[i],shift);
     index++;
   }
   return cipher;

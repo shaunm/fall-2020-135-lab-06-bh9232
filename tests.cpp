@@ -27,7 +27,8 @@ TEST_CASE("one word/character"){
 
 TEST_CASE("multiple words"){
 	CHECK(encryptCaesar("Hello World", 10) == "Rovvy Gybvn");
-	CHECK(encryptCaesar("Good Job", 25) == "Fnnc Ina");
+	CHECK(encryptCaesar("Way to Go!", 5) == "Bfd yt Lt!");
+
 }
 
 TEST_CASE("words with symbols"){
@@ -42,14 +43,17 @@ TEST_CASE("One word/character"){
 
 TEST_CASE("multiple words"){
 	CHECK(encryptVigenere("Hello, World!", "cake") == "Jevpq, Wyvnd!");
+	CHECK(encryptVigenere("Sublime-Text", "emacs") == "Wgbnaqq-Tgpx");
 }
 
 //decryption
 TEST_CASE("Caesar"){
 	CHECK(decryptCaesar("Rovvy Gybvn!", 10) == "Hello World!");
-	CHECK(decryptCaesar("Fnnc Ina", 25) == "Good Job");
+	CHECK(decryptCaesar("Bfd yt Lt!", 5) == "Way to Go!");
+
 }
 
 TEST_CASE("Vigenere"){
 	CHECK(decryptVigenere("Jevpq, Wyvnd!", "cake") == "Hello, World!");
+	CHECK(decryptVigenere("Wgbnaqq-Tgpx", "emacs") == "Sublime-Text");
 }
