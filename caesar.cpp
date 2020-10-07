@@ -11,17 +11,17 @@ caesar.cpp contains code for functions from caesar
 #include "caesar.h"
 
 char shiftChar(char c, int rshift){
-  c += rshift;
+  c +=  rshift;
   return c;
 }
 
 std::string encryptCaesar(std::string plaintext, int rshift){
 
+  std::string ciphertext;
   int size = plaintext.length();
   
   for(int i = 0; i < size; i++){
-    plaintext[i] += rshift;
+    ciphertext += shiftChar(plaintext[i], rshift);
   }
-
-  return plaintext;
+  return ciphertext;
 }
