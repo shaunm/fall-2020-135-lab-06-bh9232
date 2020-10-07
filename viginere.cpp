@@ -4,11 +4,11 @@ Course: CSCI 135
 Instructor: Mike Zamansky
 Assignment: Lab 05
 
-caesar.cpp contains code for functions from caesar.h
-*/
+viginere.cpp contains code for functions from viginere.h
+ */
 #include <iostream>
 #include <string>
-#include "caesar.h"
+#include "viginere.h"
 
 char shiftChar(char c, int rshift){ //helper method
 
@@ -31,13 +31,14 @@ char shiftChar(char c, int rshift){ //helper method
   return c;
 }
 
-std::string encryptCaesar(std::string plaintext, int rshift){
+std::string encryptViginere(std::string text, std::string keyword){//allowed to assume keyword is all lowercase letters
+  std::string cipher;
 
-  std::string ciphertext;
-  int size = plaintext.length();
-  
+  int size = text.length();
+  int shift;
   for(int i = 0; i < size; i++){
-    ciphertext += shiftChar(plaintext[i], rshift);
+    shift = 65 - keyword[i];
+    cipher[i] = shiftChar(text[i],shift);
   }
-  return ciphertext;
+  return cipher;
 }
