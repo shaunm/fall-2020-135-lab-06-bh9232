@@ -2,7 +2,7 @@
 Auhtor: Brian Hong
 Course: CSCI 135
 Instructor: Mike Zamansky
-Assignment: Lab 05
+Assignment: Lab 06
 
 caesar.h contains headers for functions to be used in caesar.cpp
  */

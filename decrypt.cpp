@@ -2,7 +2,7 @@
 Auhtor: Brian Hong
 Course: CSCI 135
 Instructor: Mike Zamansky
-Assignment: Lab 05
+Assignment: Lab 06
 
 decrypt.cpp contains code for functions from decrypt.h
 */

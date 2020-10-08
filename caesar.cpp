@@ -2,7 +2,7 @@
 Auhtor: Brian Hong
 Course: CSCI 135
 Instructor: Mike Zamansky
-Assignment: Lab 05
+Assignment: Lab 06
 
 caesar.cpp contains code for functions from caesar.h
 */
@@ -17,12 +17,12 @@ char shiftChar(char c, int shift){ //helper method
 
     //if upper case letters
     if(isupper(c)){
-      c = ((int)c + shift - 65) % 26 + 65; 
+      c = ((int)c + 26 + shift - 65) % 26 + 65; 
     } 
 
     //if lower case letters
     else if (islower(c)){
-      c = ((int)c + shift - 97) % 26 + 97;  
+      c = ((int)c + 26 + shift - 97) % 26 + 97;  
     }
   }
   
