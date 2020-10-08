@@ -17,7 +17,7 @@ char shiftChar(char c, int shift){ //helper method
 
     //if upper case letters
     if(isupper(c)){
-      c = ((int)c + 26 + shift - 65) % 26 + 65; 
+      c = ((int)c + 26 + shift - 65) % 26 + 65;
     } 
 
     //if lower case letters
