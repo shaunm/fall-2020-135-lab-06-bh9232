@@ -9,10 +9,12 @@
 
 int main()
 {
-  test_ascii("Hello");
-  std::cout << "\n";
-  test_ascii("Rawr");
+	test_ascii("Hello");
+	std::cout << "\n";
+	test_ascii("Rawr");
+	
 
-  std::cout << decode("N qnpj yt uqfd anijtlfrjx") << "\n";
-  return 0;
+	std::cout << decode("N qnpj yt uqfd anijtlfrjx") << "\n";
+	std::cout << decode("S vsuo dy rkfo pex gsdr pbsoxnc") << "\n";
+	return 0;
 }
