@@ -61,6 +61,6 @@ TEST_CASE("Vigenere"){
 
 //decode
 TEST_CASE("Decode"){
-	CHECK(decode(encryptCaesar("Hello", 10)) == "Rovvy");
-	CHECK(decode(encryptCaesar("Happy Birthday", 5)) == "Mfuud Gnwymifd");
+	// CHECK(decode(encryptCaesar("Hello", 10)) == "Rovvy");
+	CHECK(decode(encryptCaesar("I like to play videogames", 5)) == "I like to play videogames");
 }
