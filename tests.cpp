@@ -15,6 +15,7 @@ test.cpp contains test cases
 #include "vigenere.h"
 #include "decrypt.h"
 #include "decode.h"
+#include <string>
 
 // add your tests here
 
@@ -61,6 +62,5 @@ TEST_CASE("Vigenere"){
 
 //decode
 TEST_CASE("Decode"){
-	// CHECK(decode(encryptCaesar("Hello", 10)) == "Rovvy");
-	CHECK(decode(encryptCaesar("I like to play videogames", 5)) == "I like to play videogames");
+	CHECK(decode("N qnpj yt uqfd anijtlfrjx") == "I like to play videogames");
 }

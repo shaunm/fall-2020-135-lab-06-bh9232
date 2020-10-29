@@ -13,6 +13,6 @@ int main()
   std::cout << "\n";
   test_ascii("Rawr");
 
-  decode(encryptCaesar("Hello", 10));
+  std::cout << decode("N qnpj yt uqfd anijtlfrjx") << "\n";
   return 0;
 }
