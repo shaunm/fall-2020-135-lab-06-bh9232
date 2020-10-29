@@ -63,4 +63,5 @@ TEST_CASE("Vigenere"){
 //decode
 TEST_CASE("Decode"){
 	CHECK(decode("N qnpj yt uqfd anijtlfrjx") == "I like to play videogames");
+	CHECK(decode("N fr hzwwjsyqd fyyjsinsl Mzsyjw Htqqjlj") == "I am currently attending Hunter College");
 }
