@@ -7,10 +7,10 @@
 std::string decode(std::string cipher){
 
 	double freq[] = {.082,.015,.028,.043,.13,.022,.02,.061,.07,.0015,.0077,.04,.024,.067,.075,.019,.00095,.06,.063,.091,.028,.0098,.024,.0015,.02,.00074};
-	double app[26];//letter apperance in cipher
+	double app[26];//letter appearance in cipher
 	std::string word;
-	std::string result[26];
-	double distance[26];
+	std::string result[26]; //all possible string rotations
+	double distance[26]; //distances of rotations from common freq
 	double sum = 0, min;
 	int count, index;
 
