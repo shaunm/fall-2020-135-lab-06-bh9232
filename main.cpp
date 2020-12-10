@@ -6,6 +6,7 @@
 #include "decrypt.h"
 #include "decode.h"
 
+//Your code looks great. I don't have any meaningful suggestions. I am opening this for the sake of the Lab 06 assignment
 
 int main()
 {
